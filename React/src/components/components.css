@@ -1,0 +1,150 @@
+body {
+  overflow-y: hidden;
+}
+
+input {
+  border-radius: 5px;
+  width:180px;
+  text-indent: 10px;
+  height: 30px;
+}
+
+.button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  left: 10px;
+  margin: auto;
+  display: block;
+  width: 120px;
+  border-radius: 15px;
+  box-shadow: 1px 3px 5px #0c6310;
+  cursor:pointer;
+  outline: none;
+  color:white;
+  transition: 0.5s;
+  background-color:rgba(164,179,87,1);
+  height: 50px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.button:hover{
+  background-color:#0a4f1a;
+  transform: translateY(.4vh);
+}
+
+
+
+
+.buttonCreateAppointment {
+  position: absolute;
+  bottom: 10px;
+  right: 130px;
+  left: 10px;
+  margin: auto;
+  display: block;
+  width: 105px;
+  border-radius: 15px;
+  box-shadow: 1px 3px 5px #0c6310;
+  cursor:pointer;
+  outline: none;
+  color:white;
+  transition: 0.5s;
+  background-color:rgba(164,179,87,1);
+  height: 50px;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-shadow: 2px 2px 2px black;
+}
+
+.buttonCreateAppointment:hover{
+  background-color:#0a4f1a;
+  transform: translateY(.4vh);
+}
+
+.buttonCancel {
+  position: absolute;
+  bottom: 10px;
+  right: -110px;
+  left: 10px;
+  margin: auto;
+  display: block;
+  width: 105px;
+  border-radius: 15px;
+  box-shadow: 1px 3px 5px #f5ab9f;
+  cursor:pointer;
+  outline: none;
+  color:white;
+  transition: 0.5s;
+  background-color:#ff573d;
+  height: 50px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px black;
+}
+
+.buttonCancel:hover {
+  background-color:#d12604;
+  transform: translateY(.4vh);
+}
+
+.Bot {
+  position: absolute;
+  bottom: 0;
+  right: 1%;
+  width: 250px;
+  height: 250px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #71c45e;
+  box-shadow: 2px 22px 22px #71c45e;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
+  align-items:center;
+  text-align: center;
+}
+
+.Appointments {
+  font-size: 20px;
+  color: white;
+  text-shadow: 8px 8px 21px black;
+  margin: 13px auto;
+}
+
+.flexItem1 {
+  flex:1 0 100%;
+  font-size: 1.5rem;
+  margin: auto;
+  color: white;
+  text-shadow: 8px 8px 21px black;
+  padding: 5px;
+  padding-top: 30px;
+}
+
+.flexItem2 {
+  flex:1 0 100%;
+  margin: auto;
+}
+
+.flexItem3 {
+  flex:1 0 100%;
+  margin: auto;
+}
+
+.selectDateMessage {
+  color:white;
+  font-size: 1.5rem;
+  margin: 10px;
+  text-shadow: 8px 8px 21px black;
+}
+
+.AppointmentsFromDB {
+  width:30%;
+  margin:20px;
+}
+
+ul {
+  padding:0!important;
+}
