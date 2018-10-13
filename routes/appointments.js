@@ -49,6 +49,15 @@ console.log('inside delete')
     })
 });
 
+router.delete('/remove-all', (req,res) => {
+  if(!req.body){
+    res.status(500).send('Request body is missing');
+  }
+  AppointmentModel.remove({})
+                  .then(doc => res.json(doc))
+                  .catch(err => res.status(500).json(err))
+});
+
 
 
 
