@@ -14,11 +14,12 @@ import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 class App extends Component {
   state = {
     isSelecting:false,
-    appointments:[],
     message: 'Select Date',
     startDate: moment().add(1,"day"),
     appointmentsFromDB:[]
   };
+
+  componentDidMount = () => this.showAppointments();  
 
   handleChange = date =>
     this.setState({
@@ -37,17 +38,6 @@ class App extends Component {
     console.log(typeof this.state.startDate._d.toUTCString())
   };
 
-  // canCreateAppointment = () => {
-  //   if(this.state.appointments.length > 0){
-  //     if (this.state.appointments.includes(this.state.startDate._d.toUTCString())){
-  //       console.log('exist')
-  //       this.setState({message:'This slot is not available anymore'});
-  //       setTimeout(()=> this.setState({message:'Select New Date'}),3000);
-  //       return false; // Includes date, so cantCreate
-  //     } else return true; // Does not include date, so canCreate
-  //   } return true; // No appointments yet, so canCreate
-  // };
-
 
   canCreateAppointment = () => {
      if(this.state.appointmentsFromDB.length === 0){
@@ -64,8 +54,6 @@ class App extends Component {
   };
 
 
-
-
   numberOfAppointments = () => {
     if(this.state.appointmentsFromDB.length === 3){
       return false;
@@ -74,12 +62,9 @@ class App extends Component {
 
 
   createAppointment = () => {
-    console.log(this.canCreateAppointment());
-    console.log(this.numberOfAppointments());
     if(this.canCreateAppointment() && this.numberOfAppointments()){
       this.setState({
         message:`Appointment booked for ${this.state.startDate._d.toUTCString()}`
-        // appointments: [...this.state.appointments, this.state.startDate._d.toUTCString()],
       })
       setTimeout(()=> this.setState({message:'Select New Date'}),3000)
     }
@@ -95,7 +80,11 @@ class App extends Component {
     });
   };
 
-  clearAppointments = () => this.setState({ appointments:[]});
+  clearAppointments = () => {
+    axios.delete('/appointment/remove-all')
+     this.setState({ appointmentsFromDB:[]});
+     this.showAppointments();
+  }
 
   showAppointments = () =>
     axios.get('/appointment')

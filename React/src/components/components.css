@@ -34,6 +34,31 @@ input {
   transform: translateY(.4vh);
 }
 
+.buttonClear {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  left: 10px;
+  margin: auto;
+  display: block;
+  width: 120px;
+  border-radius: 15px;
+  box-shadow: 1px 3px 5px #f5ab9f;
+  cursor:pointer;
+  outline: none;
+  color:white;
+  transition: 0.5s;
+  background-color:#ff573d;
+  height: 50px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.buttonClear:hover{
+  background-color:#d12604;
+  transform: translateY(.4vh);
+}
+
 
 
 

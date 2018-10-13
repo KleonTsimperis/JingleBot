@@ -29,7 +29,7 @@ const Interactions = props =>
   </div>
 
 Interactions.propTypes = {
-  appointments:PropTypes.array,
+  appointmentsFromDB:PropTypes.array,
   message:PropTypes.string,
   selected:PropTypes.object,
   handleChange:PropTypes.func,

@@ -7,7 +7,7 @@ const UIforWithinLimit = props =>
       Create Appointment
     </button>
     <button onClick={props.handleIsSelecting} className="buttonCancel">
-      Cancel
+      Go Back
     </button>
 </>
 

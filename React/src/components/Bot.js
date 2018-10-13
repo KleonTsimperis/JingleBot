@@ -26,16 +26,15 @@ const Bot = props =>
         isSelecting={props.isSelecting}
         handleIsSelecting={props.handleIsSelecting}
         createAppointment={props.createAppointment}
-        appointments={props.appointments}
         clearAppointments={props.clearAppointments}
         helpMessage={props.helpMessage}
+        appointmentsFromDB={props.appointmentsFromDB}
       />
     </div>
 
 Bot.propTypes = {
   isSelecting:PropTypes.bool,
   handleChange:PropTypes.func,
-  appointments:PropTypes.array,
   handleIsSelecting:PropTypes.func,
   createAppointment:PropTypes.func,
   clearAppointments:PropTypes.func,

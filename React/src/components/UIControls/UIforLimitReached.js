@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 const UIforLimitReached = props =>
 
-  <button onClick={props.clearAppointments} className="button">
+  <button onClick={props.clearAppointments} className="buttonClear">
     Clear Appointments
   </button>
 

@@ -10,7 +10,7 @@ const UIControls = props =>
   <div>
     {
       props.isSelecting ?
-      props.appointments.length !== 3 ?
+      props.appointmentsFromDB.length !== 3 ?
         <UIforWithinLimit
           createAppointment={props.createAppointment}
           handleIsSelecting={props.handleIsSelecting}
@@ -32,7 +32,7 @@ const UIControls = props =>
 
 UIControls.propTypes = {
   isSelecting:PropTypes.bool,
-  appointments:PropTypes.array,
+  appointmentsFromDB:PropTypes.array,
   createAppointment:PropTypes.func,
   handleIsSelecting:PropTypes.func,
   clearAppointments:PropTypes.func,
